@@ -1,5 +1,8 @@
 # PHP-cadastro-02
 
+Vídeo:
+https://youtu.be/5TUhOT5Ppf8
+
 Utilizando métodos de String:
 
 https://www.w3schools.com/js/js_string_methods.asp
