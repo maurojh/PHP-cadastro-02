@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificando senha</title>
+    <script>
+        
+window.onload = function() {
+    var campo = document.getElementById("senha");
+    campo.addEventListener("keyup", verifica);
+}
+
+function verifica() {
+    var campo = document.getElementById("senha");
+    var digitado = campo.value;
+    
+    var mensagem = "";
+    
+    if( digitado.length < 8 ) {
+        mensagem += "senha pequena" + "<br>";
+    } else {
+        mensagem +="senha correta"+ "<br>";
+    }
+    
+    var vetor_resposta = digitado.match(/[0-9]/g);
+    if( vetor_resposta.length >= 3 ) {
+        mensagem +="números corretos"+ "<br>";
+    } else {
+        mensagem +="faltam números"+ "<br>";
+    }
+    
+    document.getElementById("saida").innerHTML = mensagem;
+}    
+    </script>
+</head>
+<body>
+    <input type="text" id="senha">
+    <p id="saida"></p>
+</body>
+</html>
